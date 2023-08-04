@@ -28,8 +28,7 @@ export default class Youtube {
 
     if (outputDirectory != undefined && !fs.existsSync(outputDirectory))
       fs.mkdirSync(outputDirectory);
-    console.log(videoInfo.title.match(/ \//));
-    console.log(videoInfo.title.match(/ \//g));
+
     let stream = fs.createWriteStream(
       path.join(
         outputDirectory || "./",
@@ -70,15 +69,3 @@ export default class Youtube {
     }
   }
 }
-
-let yt = new Youtube();
-
-async function m() {
-  await yt.playlist(
-    "https://www.youtube.com/playlist?list=PL2xsJowpDh_A2pG95Daju4kG0C1aDm8Ti",
-    "videoandaudio",
-    "highestvideo"
-  );
-}
-
-m();
