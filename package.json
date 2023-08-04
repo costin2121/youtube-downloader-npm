@@ -1,0 +1,21 @@
+{
+  "name": "@cxstin/ytdl",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^20.4.6",
+    "fs": "^0.0.1-security",
+    "yt-search": "^2.10.4",
+    "ytdl-core": "^4.11.5"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node .",
+    "dev": "nodemon src/index.ts"
+  },
+  "devDependencies": {
+    "@types/yt-search": "^2.3.2"
+  }
+}
